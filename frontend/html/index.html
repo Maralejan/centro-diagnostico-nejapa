@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro Diagnóstico Nejapa</title>
+  <link rel="stylesheet" href="../css/styles-index.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="../assets/favicons/site.webmanifest" />
+
+  <!--Metadatos basicos description y keywords-->
+  <meta name="description" content="Centro Diagnóstico Nejapa: Tu salud es nuestra prioridad. Atención médica general, especialidades, medicina preventiva en Nejapa, Managua. Agenda tu cita.">
+  <meta name="keywords" content="Centro médico Nejapa, medicina general, especialidades médicas, salud, consultas, vacunación, diagnóstico">
+  <meta name="author" content="Centro Diagnóstico Nejapa">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Centro Diagnóstico Nejapa | Tu salud, nuestra prioridad">
+  <meta property="og:description" content="Atención médica general y especializada en Nejapa. Equipo profesional, tecnología moderna y trato humanizado.">
+  <meta property="og:image" content="https://tunombre.netlify.app/assets/logo-social.png">
+  <meta property="og:url" content="https://tunombre.netlify.app">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+</head>
+<body>
+
+  <!-- NAVBAR CON HAMBURGUESA -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo">
+        <span>Centro Diagnóstico Nejapa</span>
+      </div>
+
+      <!-- Botón hamburguesa (solo visible en móvil) -->
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Menú de navegación -->
+      <nav id="navMenu">
+        <a href="index.html" onclick="loadPage('inicio');" data-page="inicio" class="active">Inicio</a>
+        <a href="#" onclick="loadPage('servicios-c');" data-page="servicios-c">Servicios</a>
+        <a href="#" onclick="loadPage('especialidades-c');" data-page="especialidades-c">Especialidades</a>
+        <a href="#" onclick="loadPage('nosotros-c');" data-page="nosotros-c">Nosotros</a>
+        <a href="#" onclick="loadPage('consejos-c');" data-page="consejos-c">Consejos de Salud</a>
+        <a href="#" onclick="loadPage('contacto-c');" data-page="contacto-c">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenedor de contenido dinámico -->
+  <main id="content">
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="../assets/logo.png" class="footer-logo" alt="Logo">
+        <div>
+          <strong>Centro Diagnóstico Nejapa</strong>
+          <p>Tu salud, nuestra prioridad</p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 Centro Diagnóstico Nejapa</p>
+        <p>Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/home.js"></script>
+
+</body>
+</html>

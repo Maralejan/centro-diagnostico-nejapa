@@ -1,0 +1,730 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#eef4f8;
+}
+
+.titulo{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.titulo h1{
+  font-size:42px;
+  color:#2c6b93;
+}
+
+/* ICONO DEBAJO DEL TITULO */
+.icon-top{
+  width:60px;
+  height:60px;
+  background:linear-gradient(135deg,#2d7ca8,#5fb3cf);
+  color:white;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:15px auto;
+
+  font-size:22px;
+
+  box-shadow:0 10px 25px rgba(44,127,184,0.45);
+
+  animation:floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+  0%,100%{ transform:translateY(0);}
+  50%{ transform:translateY(-6px);}
+}
+
+.icon-top:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 35px rgba(44,127,184,0.55);
+}
+
+.titulo h1{
+  font-size:42px;
+  color:#2c6b93;
+}
+
+#paragraph-title{
+  color:#5f8fa8;
+  font-size: 14px;
+}
+
+/* CONTENEDOR */
+.contenedor{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  gap:30px;
+  padding:40px 20px;
+}
+
+/* IZQUIERDA */
+.info{
+  flex:1;
+}
+
+/* CAJAS ESTILO */
+.box{
+  position:relative;
+  background:#f4f8fb;
+  padding:22px 20px;
+  border-radius:18px;
+  display:flex;
+  gap:18px;
+  margin-bottom:20px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.35s;
+  overflow:hidden;
+}
+
+/* FRANJA AZUL */
+.box::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:5px;
+  height:100%;
+  background:linear-gradient(180deg,#2d7ca8,#5fb3cf);
+  border-radius:10px;
+}
+
+/* HOVER */
+.box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(95,179,207,0.35);
+}
+
+/* ICONOS */
+.box .icon{
+  min-width:55px;
+  height:55px;
+  border-radius:15px;
+
+  background:linear-gradient(135deg,#2d7ca8,#5fb3cf);
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:20px;
+
+  box-shadow:0 8px 18px rgba(44,127,184,0.35);
+}
+
+/* TITULO */
+.box h3{
+  color:#2c6b93;
+  margin-bottom:5px;
+}
+
+/* TEXTO */
+.box p{
+  color:#5f8fa8;
+  margin:4px 0;
+  position:relative;
+  padding-left:18px;
+}
+
+/* VIÑETAS */
+.box p::before{
+  content:">";
+  position:absolute;
+  left:0;
+  color:#5fb3cf;
+  font-weight:bold;
+}
+
+/* MAPA */
+.mapa iframe{
+  width:100%;
+  height:250px;
+  border:none;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+/* FORMULARIO */
+.formulario{
+  flex:1;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+
+  text-align:center;
+}
+
+/* ICONO AVION */
+.formulario::before{
+  content:"\f1d8";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:60px;
+  height:60px;
+
+  background:linear-gradient(135deg,#2d7ca8,#5fb3cf);
+  color:white;
+
+  border-radius:15px;
+
+  margin:0 auto 15px auto;
+
+  font-size:22px;
+
+  box-shadow:0 10px 20px rgba(44,127,184,0.35);
+
+  animation:float 3s ease-in-out infinite;
+  margin-top: 30px;
+}
+
+@keyframes float{
+  0%,100%{ transform:translateY(0);}
+  50%{ transform:translateY(-6px);}
+}
+
+.formulario h2{
+  color:#2c6b93;
+  margin-top:10px;
+}
+
+.formulario p{
+  color:#5f8fa8;
+  margin-bottom:25px;
+}
+
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+}
+
+/* LABELS */
+label{
+  margin-top:12px;
+  margin-bottom:6px;
+  color:#2c6b93;
+  font-size:14px;
+  font-weight:600;
+  font-family: inherit;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding-left: 10px;
+}
+
+/* ICONO EN LABEL */
+label i{
+  font-size:12px;
+  color:#5fb3cf;
+
+  animation:iconMove 2s ease-in-out infinite;
+}
+
+/* MOVIMIENTO SUAVE */
+@keyframes iconMove{
+  0%,100%{ transform:translateY(0);}
+  50%{ transform:translateY(-3px);}
+}
+
+/* INPUTS */
+input, textarea{
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #cfdfe8;
+  outline:none;
+  font-family:'Poppins';
+
+  background:linear-gradient(180deg,#f8fcff,#eaf4f9);
+  transition:0.25s;
+}
+
+/* FOCUS */
+input:focus, textarea:focus{
+  border-color:#2c7fb8;
+  box-shadow:0 0 8px rgba(44,123,184,0.3);
+  background:white;
+}
+
+textarea{
+  font-family: 'Poppins';
+  min-height:120px;
+  resize:none;
+}
+
+/* BOTON */
+button{
+  margin-top:30px;
+  background:linear-gradient(135deg,#2d7ca8,#5fb3cf);
+  color:white;
+  font-weight:700;
+  font-size: 14px;
+  border:none;
+  padding:14px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+/* BRILLO SUAVE BOTON */
+button::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-150%;
+  width:150%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 40%,
+    rgba(255,255,255,0.25) 50%,
+    rgba(255,255,255,0.15) 60%,
+    transparent 100%
+  );
+
+  transform:skewX(-20deg);
+  animation:shineSmooth 4s infinite;
+}
+
+/* ANIMACION SUAVE */
+@keyframes shineSmooth{
+  0%{
+    left:-150%;
+  }
+  100%{
+    left:150%;
+  }
+}
+
+@keyframes shineBtn{
+  100%{
+    transform:translateX(100%);
+  }
+}
+
+/* HOVER */
+button:hover{
+  transform:scale(1.01);
+  box-shadow:0 12px 25px rgba(44,127,184,0.4);
+}
+
+/* FLECHA */
+button span{
+  display:inline-block;
+  margin-left:8px;
+  animation:arrowMove 1.5s infinite;
+}
+
+@keyframes arrowMove{
+  0%,100%{ transform:translateX(0);}
+  50%{ transform:translateX(5px);}
+}
+
+/* TEXTO SEGURIDAD */
+.secure{
+  display:block;
+  margin-top:20px;
+  color:#5f8fa8;
+  font-size:13px;
+  text-align:center;
+}
+
+/* MAPA ESTILO*/
+.mapa-card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(44,123,184,0.25);
+  transition:0.3s;
+}
+
+/* HOVER SUAVE */
+.mapa-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 45px rgba(44,123,184,0.35);
+}
+
+/* HEADER AZUL */
+.mapa-header{
+  background:linear-gradient(135deg,#2d7ca8,#5fb3cf);
+  color:white;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:15px 20px;
+}
+
+/* ICONO */
+.mapa-icon{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+}
+
+/* TEXTOS */
+.mapa-header h3{
+  margin:0;
+  font-size:16px;
+}
+
+.mapa-header p{
+  margin:0;
+  font-size:13px;
+  opacity:0.9;
+}
+
+/* BOTON MAPS */
+.map-btn{
+  display:inline-block;
+  margin:10px 15px;
+  padding:6px 10px;
+  font-size:12px;
+  background:#eaf4f9;
+  color:#2c7fb8;
+  border-radius:6px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.map-btn:hover{
+  background:#d8eef7;
+}
+
+/* MAPA */
+.mapa iframe{
+  width:100%;
+  height:250px;
+  border:none;
+  
+}
+
+.contacto{
+  margin-top:130px;
+}
+
+/* ========== RESPONSIVE CONTACTO ========== */
+
+/* Tablet (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contacto {
+    margin-top: 100px;
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+  .formulario {
+    order: 1;
+    width: 100%;
+  }
+  .info {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  /* Reordenar: primero teléfonos, luego mapa, luego ubicación y horario */
+  .info .box:nth-of-type(1) { /* Ubicación */
+    order: 3;
+  }
+  .info .box:nth-of-type(2) { /* Teléfonos */
+    order: 1;
+  }
+  .info .box:nth-of-type(3) { /* Horario */
+    order: 4;
+  }
+  .info .mapa-card {
+    order: 2;
+    margin-top: 10px;
+    margin-bottom: 25px
+  }
+  .box {
+    padding: 18px 16px;
+    gap: 15px;
+  }
+  .box .icon {
+    min-width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+  .box h3 {
+    font-size: 18px;
+  }
+  .box p {
+    font-size: 13px;
+    padding-left: 15px;
+  }
+  .mapa-header {
+    padding: 12px 16px;
+  }
+  .mapa-header h3 {
+    font-size: 15px;
+  }
+  .mapa-header p {
+    font-size: 12px;
+  }
+  .mapa iframe {
+    height: 220px;
+  }
+  .formulario {
+    padding: 25px;
+  }
+  .formulario::before {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .formulario h2 {
+    font-size: 26px;
+  }
+  input, textarea {
+    padding: 10px;
+  }
+  button {
+    padding: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .contacto {
+    margin-top: 80px;
+    padding: 20px 0;
+  }
+  .titulo h1 {
+    font-size: 32px;
+  }
+  .icon-top {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 10px auto;
+  }
+  #paragraph-title {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 16px;
+  }
+  .formulario {
+    order: 1;
+    width: 100%;
+  }
+  .info {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  /* Reordenar: primero teléfonos, luego mapa, luego ubicación y horario */
+  .info .box:nth-of-type(1) { /* Ubicación */
+    order: 3;
+  }
+  .info .box:nth-of-type(2) { /* Teléfonos */
+    order: 1;
+  }
+  .info .box:nth-of-type(3) { /* Horario */
+    order: 4;
+  }
+  .info .mapa-card {
+    order: 2;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  /* Estilo horizontal de las cajas (igual que tablet) */
+  .box {
+    display: flex;
+    flex-direction: row;      /* ← horizontal */
+    text-align: left;          /* ← texto alineado a la izquierda */
+    padding: 18px 16px;
+    gap: 15px;
+  }
+  .box .icon {
+    min-width: 48px;
+    height: 48px;
+    font-size: 18px;
+    margin: 0;                 /* ← quita el margin: 0 auto */
+  }
+  .box h3 {
+    font-size: 18px;
+  }
+  .box p {
+    font-size: 13px;
+    padding-left: 15px;
+    margin: 4px 0;
+  }
+  .box p::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #5fb3cf;
+    font-weight: bold;
+  }
+  .mapa-header {
+    flex-direction: row;       /* ← mantener horizontal en móvil? O puede seguir column, tú decides */
+    justify-content: space-between;
+    text-align: left;
+    gap: 15px;
+    padding: 12px 16px;
+  }
+  .mapa-header h3 {
+    font-size: 15px;
+  }
+  .mapa-header p {
+    font-size: 12px;
+  }
+  .mapa iframe {
+    height: 200px;
+  }
+  .formulario {
+    padding: 20px 15px;
+  }
+  .formulario::before {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .formulario h2 {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+  .formulario p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  label {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  input, textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .secure {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .contacto {
+    margin-top: 70px;
+  }
+  .titulo h1 {
+    font-size: 28px;
+  }
+  .icon-top {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  #paragraph-title {
+    font-size: 12px;
+  }
+  .contenedor {
+    padding: 15px 12px;
+  }
+  /* Cajas horizontales con tamaños ligeramente reducidos */
+  .box {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 12px;
+    gap: 12px;
+    align-items: start;
+    padding-left: 20px;
+  }
+  .box .icon {
+    min-width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .box h3 {
+    font-size: 17px;
+    align-items: center;
+  }
+  .box p {
+    font-size: 12px;
+    padding-left: 12px;
+  }
+  .mapa-card {
+    margin-bottom: 20px;
+  }
+  .mapa-header {
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px;
+  }
+  .mapa-header h3 {
+    font-size: 14px;
+  }
+  .mapa-header p {
+    font-size: 11px;
+  }
+  .mapa iframe {
+    height: 180px;
+  }
+  .formulario {
+    padding: 18px 12px;
+  }
+  .formulario::before {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .formulario h2 {
+    font-size: 22px;
+  }
+  .formulario p {
+    font-size: 12px;
+  }
+  label {
+    font-size: 12px;
+  }
+  input, textarea {
+    padding: 8px;
+    font-size: 13px;
+  }
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .secure {
+    font-size: 10px;
+  }
+}
