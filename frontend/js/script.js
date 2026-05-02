@@ -45,11 +45,11 @@ function loadPage(page) {
   }
 
   const cssMap = {
-    'servicios-c': '../css/servicios.css',
-    'especialidades-c': '../css/especialidades.css',
-    'nosotros-c': '../css/nosotros.css',
-    'consejos-c': '../css/consejos.css',
-    'contacto-c': '../css/contacto.css'
+    'servicios-c': 'css/servicios.css',
+    'especialidades-c': 'css/especialidades.css',
+    'nosotros-c': 'css/nosotros.css',
+    'consejos-c': 'css/consejos.css',
+    'contacto-c': 'css/contacto.css'
   };
   const cssPath = cssMap[page];
   const cssPromise = cssPath ? loadCSS(cssPath) : Promise.resolve(null);
@@ -70,7 +70,7 @@ function loadPage(page) {
       if (page === 'inicio') {
         if (!document.querySelector('script[src*="inicio.js"]')) {
           const script = document.createElement('script');
-          script.src = '../js/inicio.js';
+          script.src = 'js/inicio.js';
           script.onload = () => {
             if (window.iniciarCarrusel) window.iniciarCarrusel();
           };
